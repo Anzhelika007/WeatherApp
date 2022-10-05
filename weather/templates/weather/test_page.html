@@ -1,1 +1,32 @@
-<h3>Test</h3>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение погоды</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="dropdown-menu d-block position-static pt-0 mx-0 rounded-3 shadow overflow-hidden w-280px">
+        <form class="p-2 mb-2 bg-light border-bottom">
+          <input type="search" class="form-control" autocomplete="false" placeholder="Type to filter...">
+        </form>
+        <ul class="list-unstyled mb-0">
+          <li>
+            <span class="d-inline-block bg-success rounded-circle p-1"></span>
+            Город
+         </li> {{ info.city }}
+          <li>
+            <span class="d-inline-block bg-primary rounded-circle p-1"></span>
+            Температура
+          </li>{{ info.temp }}
+          <li>
+            <span class="d-inline-block bg-info rounded-circle p-1"></span>
+            Описание
+         </li>{{ info.description }}
+        </ul>
+      </div>
+
+</body>
+</html>

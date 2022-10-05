@@ -17,24 +17,34 @@
           <a class="me-3 py-2 text-dark text-decoration-none" href="#">Главная страница</a>
           <a class="me-3 py-2 text-dark text-decoration-none" href="#">Информация</a>
         </nav>
-      </div>
-      <div class="container mt-5">
-          <div class="row">
-              <div class="col-5 offset-1">
-                  <form action="">
-                      <label for="city">Город</label>
-                      <input type="text" id ="city" class="form-control" name="city" placeholder="Введите город">
-                      <input type="submit" name="send" value="Узнать" class="mt-2 btn btn-danger">
-                  </form>
-              </div>
+    </div>
 
-              <div class="col-4 offset-1">
-                  <h1>Информация</h1>
-                  <div class="alter alter-danger">
-                      Погода в Минске
-                  </div>
-              </div>
-          </div>
-      </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-5 offset-1">
+                <form action="">
+                    <label for="city">Город</label>
+                    <input type="text" id ="city" class="form-control" name="city" placeholder="Введите город">
+                    <input type="submit" name="send" value="Узнать" class="mt-2 btn btn-danger">
+                </form>
+            </div>
+
+            <div class="col-4 offset-1">
+                <h1>Информация</h1>
+                <div class="alert alert-info">
+                    <div class="row">
+                        <div class="col-9">
+                            <b>Город:</b>{{ info.city }}<br>
+                            <b>Температура:</b>{{ info.temp }}<sup>0</sup><br>
+                        </div> 
+                        <div class="col-2 offset-1">
+                            <img src="https://openweathermap.org/img/w/{{ info.icon }}.png" alt="Фото погоды">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
