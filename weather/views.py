@@ -24,8 +24,12 @@ def index(request):
             'temp': res["main"]["temp"],
             'icon': res["weather"][0]["icon"]
         }
-
-        all_cities.append(city_info)
+        if city_info not in all_cities:
+            all_cities.append(city_info)
+        else:
+            index = all_cities.index(city_info)
+            desc = all_cities.pop(index)
+            all_cities.insert(0, desc)
 
     context = {'all_info': all_cities, 'form': form}
 
